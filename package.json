@@ -1,0 +1,21 @@
+{
+  "name": "pendulum",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "scripts": {
+    "start": "leon-physics-scripts start",
+    "build": "leon-physics-scripts build"
+  },
+  "devDependencies": {
+    "leon-physics-scripts": "^1.0.5",
+    "ts-loader": "^8.0.4",
+    "typescript": "^4.0.3"
+  },
+  "dependencies": {
+    "leon-physics-lib": "^1.0.4"
+  }
+}
