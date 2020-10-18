@@ -9,7 +9,7 @@ async function init() {
     const L1 = 5;
     const L2 = 3;
 
-    const a0 = module.init(1.6, 2, 0, 0);
+    module.init(1.6, 2, 0, 0);
 
     const sim = new Simulation("canvas",
         () => {
