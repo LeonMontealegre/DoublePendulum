@@ -17,6 +17,9 @@ async function init() {
                 module.step(0.01);
         },
         (p) => {
+            p.save();
+            p.scale(V(3));
+
             const a1 = module.a1() - Math.PI/2;
             const a2 = module.a2() - Math.PI/2;
 
@@ -31,10 +34,22 @@ async function init() {
 
             p.drawLine(p3, p4);
             p.fillCirc(p4, 2);
+
+            p.restore();
         }
     );
 
     sim.start();
+
+    document.addEventListener("keypress", (ev) => {
+        // Toggle play/pause of sim
+        if (ev.key === " ") {
+            if (sim.isStopped())
+                sim.start();
+            else
+                sim.stop();
+        }
+    });
 }
 
 init();
